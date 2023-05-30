@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "RobotoMono";
+  src: url("/fonts/Roboto_Mono/RobotoMono-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url("/fonts/Roboto_Mono/RobotoMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-body: -apple-system, "Segoe UI", Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: RobotoMono, var(--font-body);
+  --color-background: #060606;
+  --color-foreground: #f2f2f2;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  font-family: var(--font-display);
+}
+
