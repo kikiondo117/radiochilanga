@@ -19,7 +19,7 @@ export function Player() {
           <BsPauseCircle
             role="button"
             tabIndex={0}
-            className="bg-black/90 rounded-full text-blue text-8xl"
+            className="bg-white rounded-full text-blue text-8xl"
           />
         </button>
       ) : (
@@ -39,7 +39,7 @@ export function Player() {
           <BsPlayCircle
             tabIndex={0}
             role="button"
-            className="bg-black/90 rounded-full text-8xl"
+            className="bg-white rounded-full text-8xl"
           />
         </motion.button>
       )}

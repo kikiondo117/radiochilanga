@@ -1,71 +1,77 @@
-import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
-import { useState } from "react";
+import type { V2_MetaFunction } from "@remix-run/node";
+
 // * Assets
 import * as programming from "~/utils/programacion";
-// * Components
-import moment from "moment";
+
 // * Custom Components
-import { Player } from "~/components/Player";
+import { Player } from "~/components/Player/Player";
+import { Section } from "~/components/Section/Section";
+import { Host } from "~/components/Host/Host";
+import { Post } from "~/components/Post/Post";
 
 export default function Index() {
-  const [day] = useState(() => {
-    const currentDay = moment().day();
-    const dia = programming.days[currentDay];
-    return dia;
-  });
-
   return (
     <>
       <main
         id="play"
-        className={`
-         col-start-1 col-end-13
-        w-full bg-fixed h-screen bg-main bg-fi bg-center bg-cover object-contain flex flex-col justify-center items-center
-        md:bg-local
-      `}
+        className="flex flex-col items-center md:flex-row md:justify-around"
       >
-        <Player />
+        <img src="/img/viene-viene-2.webp" alt="logo" />
+
+        <div className="my-8 md:m-0">
+          <Player />
+        </div>
       </main>
 
-      <section className=" col-start-1 col-end-13 mb-4 md:my-0 ">
-        <div className="flex flex-col justify-center  md:flex-row items-center">
-          <div className="h-full w-full">
-            <img
-              className="h-full w-full mb-8 max-w-4xl"
-              style={{
-                clipPath:
-                  "polygon(15% 0%, 100% 0%, 91.3% 24.8%, 67.2% 99.5%, 85.2% 100%, 15% 100%, 0% 85%, 0% 15%)",
-              }}
-              src="/img/cabina.jpeg"
-              alt=""
-            />
-          </div>
+      <section className=" min-h-screen">
+        <Section title="Nustros programas" subtitle="de lunes a viernes" />
 
-          {programming.Schedule.map((scheduleByLocutor: any) => {
+        <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
+          {programming.programas.map((programa) => {
             return (
               <div
-                key={scheduleByLocutor.locutor}
-                className="flex flex-col items-center px-4 md:px-0 "
+                key={programa.locutor}
+                className="bg-gray-special rounded-sm w-96 h-64 capitalize flex flex-col justify-end hover:opacity-90 cursor-pointer"
               >
-                <p className="text-white self-start md:self-start md:mt-8">
-                  {scheduleByLocutor.locutor} 🎤👨🏻‍💼
+                <p className="text-red-500 bg-white w-fit px-4 py-2 ">
+                  Lunes a viernes {programa.hora}
                 </p>
-                <div className="self-start mx-4 md:self-start">
-                  {scheduleByLocutor[day].map((programming: any) => {
-                    return (
-                      <ul key={programming.programa}>
-                        <li className="text-yellow-300 ">
-                          {programming.programa}
-                        </li>
-                        <li className="time-program">{programming.hora}</li>
-                      </ul>
-                    );
-                  })}
-                </div>
+
+                <p className="bg-gray-800 w-fit text-white p-4">
+                  {programa.nombre}
+                </p>
               </div>
             );
           })}
         </div>
+      </section>
+
+      <section className="mb-12">
+        <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGO" />
+
+        <div className="mt-16">
+          <Host />
+        </div>
+      </section>
+
+      <section className="flex flex-wrap justify-center gap-4 md:gap-0  md:justify-between my-12">
+        <Post title="Radio Chilanga">
+          <p>
+            Dándole un respiro a los habitantes de la Ciudad de México con
+            programas clasicos desde la perspectiva más chilanga.
+          </p>
+        </Post>
+
+        <Post title="CEO">
+          <p>
+            Nustro objetivo es crear contenido digital de calidad. Planeamos se
+            unas de las plataformas top de Latinoamerica.
+          </p>
+        </Post>
+
+        <Post title="¡Síguenos!">
+          <p>Facebook.</p>
+        </Post>
       </section>
     </>
   );

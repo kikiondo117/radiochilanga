@@ -1,10 +1,17 @@
+import { Link } from "@remix-run/react";
+
 export function NavBar() {
   return (
-    <nav className="fixed w-full bg-black h-12 flex items-center gap-2 px-8">
-      <button>
-        <img className="h-full w-6 text-black" src="/img/logo.svg" alt="" />
-      </button>
-      <p className="m-0 p-0">RADIO CHILANGA</p>
+    <nav className="bg-transparent flex justify-between">
+      <p>Logo</p>
+
+      <ul>
+        <li className="bg-secondary text-white hover:bg-red-700 transition-all ease-in-out duration-300">
+          <Link className="p-4" to="/programas">
+            Programas
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 }
