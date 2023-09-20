@@ -23,7 +23,8 @@ export default function Index() {
         </div>
       </main>
 
-      <section className=" min-h-screen">
+      {/* ANCHOR Programas */}
+      <section className="min-h-screen">
         <Section title="Nuestros programas" subtitle="de lunes a viernes" />
 
         <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
@@ -31,22 +32,25 @@ export default function Index() {
             return (
               <div
                 key={programa.locutor}
-                className={`bg-gray-special rounded-sm w-96 h-64 capitalize flex flex-col justify-end 
-                hover:opacity-90 cursor-pointer bg-center ${programa.image}`}
+                className={`bg-gray-special rounded-sm w-96 h-64 capitalize 
+                 cursor-pointer bg-center ${programa.image}`}
               >
-                <p className="text-red-500 bg-white w-fit px-4 py-2 ">
-                  Lunes a viernes {programa.hora}
-                </p>
+                <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
+                  <p className="text-red-500 bg-white w-fit px-4 py-2 ">
+                    Lunes a viernes {programa.hora}
+                  </p>
 
-                <p className="bg-gray-800 w-fit text-white p-4">
-                  {programa.nombre}
-                </p>
+                  <p className="bg-gray-800 w-fit text-white p-4">
+                    {programa.nombre}
+                  </p>
+                </div>
               </div>
             );
           })}
         </div>
       </section>
 
+      {/* ANCHOR Hosts */}
       <section className="mb-12">
         <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGA" />
 
