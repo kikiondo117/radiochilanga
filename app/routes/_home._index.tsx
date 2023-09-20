@@ -24,14 +24,15 @@ export default function Index() {
       </main>
 
       <section className=" min-h-screen">
-        <Section title="Nustros programas" subtitle="de lunes a viernes" />
+        <Section title="Nuestros programas" subtitle="de lunes a viernes" />
 
         <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
           {programming.programas.map((programa) => {
             return (
               <div
                 key={programa.locutor}
-                className="bg-gray-special rounded-sm w-96 h-64 capitalize flex flex-col justify-end hover:opacity-90 cursor-pointer"
+                className={`bg-gray-special rounded-sm w-96 h-64 capitalize flex flex-col justify-end 
+                hover:opacity-90 cursor-pointer bg-center ${programa.image}`}
               >
                 <p className="text-red-500 bg-white w-fit px-4 py-2 ">
                   Lunes a viernes {programa.hora}
@@ -47,10 +48,10 @@ export default function Index() {
       </section>
 
       <section className="mb-12">
-        <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGO" />
+        <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGA" />
 
         <div className="mt-16">
-          <Host />
+          <Host className="bg-manuel bg-center bg-cover" />
         </div>
       </section>
 
@@ -64,13 +65,13 @@ export default function Index() {
 
         <Post title="CEO">
           <p>
-            Nustro objetivo es crear contenido digital de calidad. Planeamos se
-            unas de las plataformas top de Latinoamerica.
+            Nuestro objetivo es crear contenido digital de calidad. Planeamos
+            ser una de las plataformas top de Latinoamericas.
           </p>
         </Post>
 
         <Post title="¡Síguenos!">
-          <p>Facebook.</p>
+          <p>Facebook - </p>
         </Post>
       </section>
     </>

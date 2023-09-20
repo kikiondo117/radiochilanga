@@ -8,26 +8,35 @@ export const days: any = {
   0: "domingo",
 };
 
-export const programas: { hora: string; nombre: string; locutor: string }[] = [
+export const programas: {
+  hora: string;
+  nombre: string;
+  locutor: string;
+  image: string;
+}[] = [
   {
     hora: "2:00 p.m - 2:30 p.m",
     nombre: "5 grandes en el cielo.",
     locutor: "Manuel Vera +52 55 8795 2622",
+    image: "bg-radio1",
   },
   {
     hora: "2:30 p.m - 3:00 p.m",
     nombre: "Música variada.",
     locutor: "Manuel Vera +52 55 8795 2622",
+    image: "bg-radio2",
   },
   {
     hora: "3:00 p.m - 4:00 p.m",
     nombre: "La Hora para Meditar.",
     locutor: "Manuel Vera +52 55 8795 2622",
+    image: "bg-radio3",
   },
   {
     hora: "4:00 p.m - 7:00 p.m",
     nombre: "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
     locutor: "Manuel Vera +52 55 8795 2622",
+    image: "bg-radio4",
   },
 ];
 

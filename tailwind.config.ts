@@ -12,6 +12,12 @@ export default {
       backgroundImage: {
         main: "url('/img/test3.jpeg')",
         patron: 'url(/img/patron.avif)',
+        radio1: 'url(/img/radio1.jpeg)',
+        radio2: 'url(/img/radio2.jpeg)',
+        radio3: 'url(/img/radio3.jpeg)',
+        radio4: 'url(/img/radio4.jpeg)',
+
+        manuel: 'url(/img/manuel-vera.jpeg)',
       },
     },
   },
