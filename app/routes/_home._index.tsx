@@ -16,8 +16,7 @@ export default function Index() {
         id="play"
         className="flex flex-col items-center my-12 md:flex-row md:justify-around md:my-24 "
       >
-        {/* <Radio className=" w-96 h-96" /> */}
-        <img src="/img/slogan.png" alt="" className=" w-1/2" />
+        <img src="/img/slogan.png" alt="" className="h-52 md:w-1/2" />
 
         <div className="my-8 md:m-0">
           <Player />
@@ -55,13 +54,35 @@ export default function Index() {
       <section className="mb-12 mt-12">
         <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGA" />
 
-        <div className="mt-16">
+        <div className="flex flex-wrap justify-center  md:justify-between  mt-16">
           <a
             target={"_blank"}
             rel="noreferrer"
             href="https://www.facebook.com/profile.php?id=61550602422734"
           >
-            <Host className="bg-manuel bg-center bg-cover" />
+            <Host
+              className="bg-manuel bg-center bg-cover"
+              title="Gracias por el apoyo!"
+              subTitle="Manuel Vera"
+            />
+          </a>
+
+          <Host
+            className="bg-secret bg-center bg-cover"
+            title="Loading..."
+            subTitle="Proximamente"
+          />
+
+          <a
+            target={"_blank"}
+            rel="noreferrer"
+            href="https://www.tiktok.com/@kikis_404"
+          >
+            <Host
+              className="bg-kikis bg-center bg-cover"
+              title="Sin miedo al exito!"
+              subTitle="kikis_404"
+            />
           </a>
         </div>
       </section>

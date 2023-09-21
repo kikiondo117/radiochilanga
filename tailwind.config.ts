@@ -18,6 +18,8 @@ export default {
         radio4: 'url(/img/radio4.jpeg)',
 
         manuel: 'url(/img/manuel-vera.jpeg)',
+        kikis: 'url(/img/kikis.jpeg)',
+        secret: 'url(/img/secrete.jpeg)'
       },
     },
   },
