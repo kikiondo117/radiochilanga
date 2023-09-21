@@ -12,9 +12,14 @@ export default function HomeLayout() {
         <Outlet />
       </div>
 
-      <footer className="bg-red-500">
-        <p>Radiochilanga © 2023. Todos los derechos reservados.</p>
-        <Link to="/nani">
+      <footer className="flex justify-around h-16">
+        <p className="bg-black w-3/4 text-white flex items-center p-4">
+          Radiochilanga © 2023. Todos los derechos reservados.
+        </p>
+        <Link
+          to="/nani"
+          className="bg-gray-special w-1/4 flex items-center p-4"
+        >
           <p>Aviso de privasidad</p>
         </Link>
       </footer>

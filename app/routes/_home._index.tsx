@@ -24,7 +24,7 @@ export default function Index() {
       </section>
 
       {/* ANCHOR Programas */}
-      <section className="min-h-screen mt-12">
+      <section className="my-28">
         <Section title="Nuestros programas" subtitle="de lunes a viernes" />
 
         <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
@@ -54,7 +54,7 @@ export default function Index() {
       <section className="mb-12 mt-12">
         <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGA" />
 
-        <div className="flex flex-wrap justify-center  md:justify-between  mt-16">
+        <div className="flex flex-wrap justify-center gap-8  md:justify-between md:gap-0  mt-16">
           <a
             target={"_blank"}
             rel="noreferrer"
@@ -87,7 +87,8 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="flex flex-wrap justify-center gap-4 md:gap-0  md:justify-between my-12">
+      {/* ANCHOR Information */}
+      <section className="flex flex-wrap justify-center gap-4 my-12 md:gap-0  md:justify-between md:my-40">
         <Post title="Radio Chilanga">
           <p>
             Dándole un respiro a los habitantes de la Ciudad de México con
