@@ -12,19 +12,20 @@ import { Post } from "~/components/Post/Post";
 export default function Index() {
   return (
     <>
-      <main
+      <section
         id="play"
-        className="flex flex-col items-center md:flex-row md:justify-around"
+        className="flex flex-col items-center my-12 md:flex-row md:justify-around md:my-24 "
       >
-        <img src="/img/viene-viene-2.webp" alt="logo" />
+        {/* <Radio className=" w-96 h-96" /> */}
+        <img src="/img/slogan.png" alt="" className=" w-1/2" />
 
         <div className="my-8 md:m-0">
           <Player />
         </div>
-      </main>
+      </section>
 
       {/* ANCHOR Programas */}
-      <section className="min-h-screen">
+      <section className="min-h-screen mt-12">
         <Section title="Nuestros programas" subtitle="de lunes a viernes" />
 
         <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
@@ -32,7 +33,7 @@ export default function Index() {
             return (
               <div
                 key={programa.locutor}
-                className={`bg-gray-special rounded-sm w-96 h-64 capitalize 
+                className={`bg-gray-special rounded-sm w-96 h-64 md:w-[30em] capitalize 
                  cursor-pointer bg-center ${programa.image}`}
               >
                 <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
@@ -51,11 +52,17 @@ export default function Index() {
       </section>
 
       {/* ANCHOR Hosts */}
-      <section className="mb-12">
+      <section className="mb-12 mt-12">
         <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGA" />
 
         <div className="mt-16">
-          <Host className="bg-manuel bg-center bg-cover" />
+          <a
+            target={"_blank"}
+            rel="noreferrer"
+            href="https://www.facebook.com/profile.php?id=61550602422734"
+          >
+            <Host className="bg-manuel bg-center bg-cover" />
+          </a>
         </div>
       </section>
 

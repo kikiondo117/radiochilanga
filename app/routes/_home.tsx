@@ -1,12 +1,12 @@
 import { Link, Outlet } from "@remix-run/react";
-import { NavBar } from "~/components/NavBar";
+import { Navbar } from "~/components/NavBar/Navbar";
 
 export default function HomeLayout() {
   return (
     <>
       <div className="px-16 md:mx-auto container">
         <header className="py-4">
-          <NavBar />
+          <Navbar />
         </header>
 
         <Outlet />
