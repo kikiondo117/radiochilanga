@@ -16,6 +16,12 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: talwindStyles },
   { rel: "stylesheet", href: globalStyles },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  { rel: "preconnect", href: "https://fonts.gstatic.com" },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;900&family=Raleway:wght@100;200;300;400;500;600;700&display=swap",
+  },
 ];
 
 export default function App() {
@@ -27,8 +33,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-patron">
+      <body className="bg-papel bg-center">
         <Outlet />
+
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

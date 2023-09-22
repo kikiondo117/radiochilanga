@@ -32,7 +32,7 @@ export default function Index() {
             return (
               <div
                 key={programa.locutor}
-                className={`bg-gray-special rounded-sm w-96 h-64 md:w-[30em] capitalize 
+                className={`bg-gray-special rounded-sm w-96 h-64 md:w-[25em] capitalize 
                  cursor-pointer bg-center ${programa.image}`}
               >
                 <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
