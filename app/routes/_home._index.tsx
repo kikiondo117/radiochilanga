@@ -8,6 +8,7 @@ import { Player } from "~/components/Player/Player";
 import { Section } from "~/components/Section/Section";
 import { Host } from "~/components/Host/Host";
 import { Post } from "~/components/Post/Post";
+import { Link } from "@remix-run/react";
 
 export default function Index() {
   return (
@@ -30,7 +31,8 @@ export default function Index() {
         <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
           {programming.programas.map((programa) => {
             return (
-              <div
+              <Link
+                to={`/program/${programa.id}`}
                 key={programa.locutor}
                 className={`bg-gray-special rounded-sm w-96 h-64 md:w-[25em] capitalize 
                  cursor-pointer bg-center ${programa.image}`}
@@ -44,7 +46,7 @@ export default function Index() {
                     {programa.nombre}
                   </p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -58,7 +60,7 @@ export default function Index() {
           <a
             target={"_blank"}
             rel="noreferrer"
-            href="https://www.facebook.com/profile.php?id=61550602422734"
+            href="https://www.facebook.com/feliciano.veraromero.58"
           >
             <Host
               className="bg-manuel bg-center bg-cover"

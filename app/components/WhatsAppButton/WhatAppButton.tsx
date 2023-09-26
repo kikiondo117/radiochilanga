@@ -49,16 +49,17 @@ const WhatsAppButton = ({
         <input
           id="song"
           name="song"
-          className="rounded-md p-2"
+          className="rounded-md p-2 border border-solid border-black "
           type="text"
           placeholder="Pide tu canción 🎶"
+          autoFocus
         />
       </div>
       <button
         className="bg-secondary text-white capitalize rounded-md p-2"
         type="submit"
       >
-        Enviar canción
+        Perdir cancion al locutor
       </button>
     </form>
   );
