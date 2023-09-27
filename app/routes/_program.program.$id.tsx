@@ -26,18 +26,6 @@ export default function Programa() {
             escuchar el programa en <strong>Radio Chilanga</strong>
           </p>
         </div>
-
-        {/* ANCHOR google add */}
-        <aside className="h-full md:w-20">
-          <ins
-            style={{ display: "block" }}
-            className="adsbygoogle"
-            data-ad-client="ca-pub-1258358039253069"
-            data-ad-slot="3055974027"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-        </aside>
       </main>
 
       {/* ANCHOR Information */}
@@ -60,14 +48,6 @@ export default function Programa() {
           <p>Facebook - </p>
         </Post>
       </section>
-
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1258358039253069"
-        crossOrigin="anonymous"
-      ></script>
-
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   );
 }

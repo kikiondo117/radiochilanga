@@ -106,7 +106,17 @@ export default function Index() {
         </Post>
 
         <Post title="¡Síguenos!">
-          <p>Facebook - </p>
+          <a
+            className="flex items-center gap-4"
+            target={"blank"}
+            href="https://www.facebook.com/profile.php?id=100076177904911"
+          >
+            <img
+              className="w-8 h-8"
+              src="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png"
+              alt="facebook"
+            />
+          </a>
         </Post>
       </section>
     </>
