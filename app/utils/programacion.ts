@@ -32,6 +32,26 @@ export const programas: ProgramType[] = [
     `,
   },
   {
+    id: 21,
+    hora: "2:30 p.m - 3:00 p.m",
+    nombre: "Musica Variada",
+    locutor: "Manuel Vera +52 55 8795 2622",
+    image: "bg-radio2",
+    bio: `¡Bienvenidos a "4 Grandes en el Cielo"! Este es el espacio donde las leyendas de la música mexicana cobran vida una vez más, para deleitarnos con sus voces inmortales y sus canciones eternas. En cada episodio, te transportaremos a una época dorada de la música ranchera y romántica, rindiendo homenaje a cuatro de los más grandes íconos: Jorge Negrete, Pedro Infante, Javier Solís y José Alfredo Jiménez.
+
+    Acompáñanos en un viaje a través del tiempo y las emociones mientras escuchamos sus clásicos atemporales. Desde las rancheras apasionadas de Jorge Negrete hasta la nostalgia inigualable de Pedro Infante, pasando por la voz inconfundible de Javier Solís y las letras profundas de José Alfredo Jiménez, cada episodio será un tributo a la riqueza de la música mexicana.
+    
+    Pero eso no es todo. Además de nuestros cuatro grandes en el cielo, te sorprenderemos con la presencia de invitados especiales. Cada semana, un artista o grupo destacado se unirá a nosotros para interpretar sus versiones de estas canciones legendarias y compartirán sus propias historias y conexiones con la música de estas leyendas.
+    
+    "4 Grandes en el Cielo" es el programa que celebra la música que ha trascendido generaciones y continúa tocando nuestros corazones. Únete a nosotros para una experiencia única llena de pasión, emoción y la belleza intemporal de la música mexicana.
+    
+    Sintoniza con nosotros y mantente conectado con las raíces musicales de México y la influencia perdurable de estos cuatro grandes artistas, así como la frescura de nuestros invitados sorpresa. ¡La música vive para siempre en "4 Grandes en el Cielo"!
+    
+    
+    
+    `,
+  },
+  {
     id: 31,
     hora: "3:00 p.m - 4:00 p.m",
     nombre: "La Hora para Reflexionar.",
@@ -51,7 +71,7 @@ export const programas: ProgramType[] = [
   {
     id: 41,
     hora: "4:00 p.m - 7:00 p.m",
-    nombre: "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
+    nombre: "Viejitas pero bonitas.",
     locutor: "Manuel Vera +52 55 8795 2622",
     image: "bg-radio4",
     bio: `

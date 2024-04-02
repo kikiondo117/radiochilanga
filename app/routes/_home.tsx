@@ -1,6 +1,6 @@
 import { Link, Outlet } from "@remix-run/react";
 import { Navbar } from "~/components/NavBar/Navbar";
-import { WhatsAppButton } from "~/components/WhatsAppButton/WhatAppButton";
+// import { WhatsAppButton } from "~/components/WhatsAppButton/WhatAppButton";
 
 export default function HomeLayout() {
   return (
@@ -9,7 +9,7 @@ export default function HomeLayout() {
         <header className="py-4">
           <Navbar />
         </header>
-        <WhatsAppButton phoneNumber="523121838986" message="hola c:" />
+        {/* <WhatsAppButton phoneNumber="52 55 8795 2622" /> */}
 
         <Outlet />
       </div>

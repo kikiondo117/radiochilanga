@@ -13,11 +13,8 @@ import { Link } from "@remix-run/react";
 export default function Index() {
   return (
     <>
-      <section
-        id="play"
-        className="flex flex-col items-center my-12 md:flex-row md:justify-around md:my-24 "
-      >
-        <img src="/img/slogan.png" alt="" className="h-52 md:w-1/2" />
+      <section id="play" className="flex flex-col items-center my-12 md:gap-8">
+        <img src="/img/slogan.png" alt="" className="h-40 md:h-52 md:w-1/2" />
 
         <div className="my-8 md:m-0">
           <Player />

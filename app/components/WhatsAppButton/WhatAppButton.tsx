@@ -1,12 +1,6 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
-const WhatsAppButton = ({
-  phoneNumber,
-  message,
-}: {
-  phoneNumber: string;
-  message: string;
-}) => {
+const WhatsAppButton = ({ phoneNumber }: { phoneNumber: string }) => {
   const [show, setShow] = useState(false);
 
   const handleClick = ({ song }: { song: string }) => {

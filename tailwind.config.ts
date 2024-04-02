@@ -11,7 +11,7 @@ export default {
       },
       backgroundImage: {
         main: "url('/img/test3.jpeg')",
-        patron: 'url(/img/patron.avif)',
+        patron: 'url(/img/patrones/patron.avif)',
         muertos: 'url(/img/patrones/muertos.png)',
         papel: 'url(/img/patrones/papel.png)',
 
