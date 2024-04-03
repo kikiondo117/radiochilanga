@@ -10,8 +10,10 @@ export default {
         'gray-special': '#e3e3e3'
       },
       backgroundImage: {
-        main: "url('/img/test3.jpeg')",
-        patron: 'url(/img/patrones/patron.avif)',
+        main: "url('/img/patrones/2.webp')",
+        patron: 'url(/img/patrones/gris.webp)',
+        patron2: 'url(/img/patrones/patron.webp)',
+        periodico: 'url(/img/patrones/periodico.webp)',
         muertos: 'url(/img/patrones/muertos.png)',
         papel: 'url(/img/patrones/papel.png)',
 

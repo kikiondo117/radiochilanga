@@ -4,7 +4,7 @@ import { Navbar } from "~/components/NavBar/Navbar";
 
 export default function HomeLayout() {
   return (
-    <>
+    <div className=" flex flex-col gap-4">
       <div className="px-16 md:mx-auto container">
         <header className="py-4">
           <Navbar />
@@ -25,6 +25,6 @@ export default function HomeLayout() {
           <p>Aviso de privasidad</p>
         </Link>
       </footer>
-    </>
+    </div>
   );
 }
