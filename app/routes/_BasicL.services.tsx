@@ -18,7 +18,7 @@ export default function Services() {
           <li>128 Kbps Streaming</li>
         </ServiceCard>
 
-        <ServiceCard black price={500} name="Intermedio">
+        <ServiceCard black price={400} name="Intermedio">
           <li>
             Una pagina de internet personalizada aparte del nombre de domino.
           </li>
