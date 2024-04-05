@@ -8,10 +8,15 @@ export function Navbar() {
         {/* <img src="/img/icons/muerto.png" alt="" className=" w-12 h-12" /> */}
       </Link>
 
-      <ul className="ml-auto md:m-0">
+      <ul className="ml-auto md:m-0 flex gap-1">
         <li className="bg-secondary text-white hover:bg-red-700 transition-all ease-in-out duration-300">
           <Link className="p-4" to="/">
             Programas
+          </Link>
+        </li>
+        <li className="bg-secondary text-white hover:bg-red-700 transition-all ease-in-out duration-300">
+          <Link className="p-4" to="/services">
+            Servicios
           </Link>
         </li>
       </ul>

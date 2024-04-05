@@ -4,10 +4,12 @@ export function ServiceCard({
   price,
   name,
   black,
+  children,
 }: {
   price?: number;
   name: string;
   black?: boolean;
+  children: any;
 }) {
   return (
     <div
@@ -18,8 +20,11 @@ export function ServiceCard({
         }
       )}
     >
-      <p className="m-0 p-0 flex-1 text-2xl font-bold">{name}</p>
-      <hr />
+      <div>
+        <p className="m-0 p-0 flex-1 text-2xl font-bold mb-4">{name}</p>
+        <hr />
+      </div>
+
       <div>
         <p className="p-0 m-0 text-xl font-semibold">Servicios</p>
 
@@ -31,31 +36,22 @@ export function ServiceCard({
             }
           )}
         >
-          <li>
-            Una pagina de internet para poder trasmitir ahí tus programas de
-            radio, musica y anuncios.
-          </li>
-
-          <li>Servicio de Auto DJ</li>
-
-          <li>Espacio para musica de 12gb</li>
-
-          <li>Una guía detallada para ayudarte a comenzar a transmitir</li>
+          {children}
         </ul>
+      </div>
 
-        <div>
-          <p className="m-0 p-0 text-xl font-bold">Precio</p>
-          <p className="m-0 p-0">
-            {price ? (
-              <>
-                <span className="text-5xl font-bold">${price}</span>{" "}
-                <span>/ al mes</span>
-              </>
-            ) : (
-              <span className="text-2xl font-bold">$ Personalizado</span>
-            )}
-          </p>
-        </div>
+      <div className="mt-auto">
+        <p className="m-0 p-0 text-xl font-bold">Precio</p>
+        <p className="m-0 p-0">
+          {price ? (
+            <>
+              <span className="text-5xl font-bold">${price}</span>{" "}
+              <span>/ al mes</span>
+            </>
+          ) : (
+            <span className="text-2xl font-bold">$ Personalizado</span>
+          )}
+        </p>
       </div>
     </div>
   );
