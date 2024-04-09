@@ -42,10 +42,12 @@ export function ServiceCard({
 
       <div className="mt-auto">
         <p className="m-0 p-0 text-xl font-bold">Precio</p>
+
         <p className="m-0 p-0">
           {price ? (
             <>
               <span className="text-5xl font-bold">${price}</span>{" "}
+              <span className=" text-xs">MXN </span>
               <span>/ al mes</span>
             </>
           ) : (
