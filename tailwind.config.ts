@@ -11,7 +11,7 @@ export default {
       },
       backgroundImage: {
         main: "url('/img/patrones/2.webp')",
-        patron: 'url(/img/patrones/gris.webp)',
+        patron: 'url(/img/patrones/blanco.png)',
         patron2: 'url(/img/patrones/patron.webp)',
         periodico: 'url(/img/patrones/periodico.webp)',
         muertos: 'url(/img/patrones/muertos.png)',

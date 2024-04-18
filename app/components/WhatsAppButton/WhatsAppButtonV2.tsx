@@ -8,7 +8,7 @@ export function WhatsAppButton({ phoneNumber }: { phoneNumber: string }) {
 
   return (
     <button
-      className="w-fit md:w-96 h-20 bg-blue-500 text-2xl md:text-4xl rounded-lg px-4 text-white hover:bg-blue-700 animate-pulse"
+      className="w-fit md:w-96 h-20 bg-blue-600 text-2xl md:text-4xl rounded-lg px-4 text-white hover:bg-blue-700 animate-pulse"
       onClick={handleClick}
     >
       {`-> `}

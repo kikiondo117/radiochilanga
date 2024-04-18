@@ -22,7 +22,7 @@ export default function HomeLayout() {
           to="/nani"
           className="bg-gray-special w-full  xl:w-3/4 flex items-center p-4"
         >
-          <p>Aviso de privasidad</p>
+          <p>Aviso de privacidad</p>
         </Link>
       </footer>
     </div>

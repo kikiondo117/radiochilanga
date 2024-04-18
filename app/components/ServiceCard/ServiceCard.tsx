@@ -14,7 +14,7 @@ export function ServiceCard({
   return (
     <div
       className={cn(
-        " bg-white border-solid border-1 border-gray-400 p-8 rounded-xl flex-1 flex flex-col gap-4",
+        " bg-white border-solid border-[1px] border-gray-400 p-8 rounded-xl flex-1 flex flex-col gap-4",
         {
           "bg-blue-950 text-white": black,
         }
