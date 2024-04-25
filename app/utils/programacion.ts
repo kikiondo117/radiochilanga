@@ -13,7 +13,7 @@ export const days: any = {
 export const programas: ProgramType[] = [
   {
     id: 11,
-    hora: "2:00 p.m - 2:30 p.m",
+    hora: "Lunes A Viernes 2:00 p.m - 2:30 p.m",
     nombre: "4 grandes en el cielo.",
     locutor: "Manuel Vera +52 55 8795 2622",
     image: "bg-radio1",
@@ -33,7 +33,7 @@ export const programas: ProgramType[] = [
   },
   {
     id: 21,
-    hora: "2:30 p.m - 3:00 p.m",
+    hora: "Lunes A Viernes 2:30 p.m - 3:00 p.m",
     nombre: "Musica Variada",
     locutor: "Manuel Vera +52 55 8795 2622",
     image: "bg-radio2",
@@ -53,7 +53,7 @@ export const programas: ProgramType[] = [
   },
   {
     id: 31,
-    hora: "3:00 p.m - 4:00 p.m",
+    hora: "Lunes A Viernes 3:00 p.m - 4:00 p.m",
     nombre: "La Hora para Reflexionar.",
     locutor: "Manuel Vera +52 55 8795 2622",
     image: "bg-radio3",
@@ -70,7 +70,7 @@ export const programas: ProgramType[] = [
   },
   {
     id: 41,
-    hora: "4:00 p.m - 7:00 p.m",
+    hora: "Lunes A Viernes  4:00 p.m - 7:00 p.m",
     nombre: "Viejitas pero bonitas.",
     locutor: "Manuel Vera +52 55 8795 2622",
     image: "bg-radio4",
@@ -86,176 +86,14 @@ Además de la música, te compartiremos anécdotas y datos curiosos sobre los ar
 Así que, sintoniza "Las Viejitas Pero Bonitas" y déjate llevar por la nostalgia, la alegría y la emoción de las canciones que resisten el paso del tiempo. Prepárate para cantar, bailar y revivir esos momentos que atesoramos en nuestra memoria y que hacen que estas canciones sean, sin duda, ¡viejitas pero bonitas!
     `,
   },
+  {
+    id: 51,
+    hora: "Viernes 8:00 p.m - 10:00 p.m",
+    nombre: "Maudcast",
+    locutor: "Mauricio Perez",
+    image: "bg-maudcast",
+    bio: `
+    Musica en Inglés, y dar tips para aprender el idioma
+     `,
+  },
 ];
-export const Felix = {
-  locutor: "Manuel Vera +52 55 8795 2622",
-  lunes: [
-    {
-      hora: "2:00 p.m - 2:30 p.m",
-      programa: "5 grandes en el cielo.",
-    },
-    {
-      hora: "2:30 p.m - 3:00 p.m",
-      programa: "Música variada.",
-    },
-    {
-      hora: "3:00 p.m - 4:00 p.m",
-      programa: "La Hora para Meditar.",
-    },
-    {
-      hora: "4:00 p.m - 7:00 p.m",
-      programa:
-        "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
-    },
-  ],
-  martes: [
-    {
-      hora: "2:00 p.m - 2:30 p.m",
-      programa: "5 grandes en el cielo.",
-    },
-    {
-      hora: "2:30 p.m - 3:00 p.m",
-      programa: "Música variada.",
-    },
-    {
-      hora: "3:00 p.m - 4:00 p.m",
-      programa: "La Hora para Meditar.",
-    },
-    {
-      hora: "4:00 p.m - 7:00 p.m",
-      programa:
-        "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
-    },
-  ],
-  miercoles: [
-    {
-      hora: "2:00 p.m - 2:30 p.m",
-      programa: "5 grandes en el cielo.",
-    },
-    {
-      hora: "2:30 p.m - 3:00 p.m",
-      programa: "Música variada.",
-    },
-    {
-      hora: "3:00 p.m - 4:00 p.m",
-      programa: "La Hora para Meditar.",
-    },
-    {
-      hora: "4:00 p.m - 7:00 p.m",
-      programa:
-        "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
-    },
-  ],
-  jueves: [
-    {
-      hora: "2:00 p.m - 2:30 p.m",
-      programa: "5 grandes en el cielo.",
-    },
-    {
-      hora: "2:30 p.m - 3:00 p.m",
-      programa: "Música variada.",
-    },
-    {
-      hora: "3:00 p.m - 4:00 p.m",
-      programa: "La Hora para Meditar.",
-    },
-    {
-      hora: "4:00 p.m - 7:00 p.m",
-      programa:
-        "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
-    },
-  ],
-  viernes: [
-    {
-      hora: "2:00 p.m - 2:30 p.m",
-      programa: "5 grandes en el cielo.",
-    },
-    {
-      hora: "2:30 p.m - 3:00 p.m",
-      programa: "Música variada.",
-    },
-    {
-      hora: "3:00 p.m - 4:00 p.m",
-      programa: "La Hora para Meditar.",
-    },
-    {
-      hora: "4:00 p.m - 7:00 p.m",
-      programa:
-        "Viejitas pero bonitas. Con la música de ayer, hoy y de siempre.",
-    },
-  ],
-  sabado: [],
-  domingo: [],
-};
-
-// export const Isabel = {
-//   locutor: "Isabel",
-//   lunes: [
-//     {
-//       hora: "9:00 p.m - 10:00 p.m",
-//       programa: "Noches de Café con Isabel",
-//     },
-//   ],
-//   martes: [
-//     {
-//       hora: "9:00 p.m - 10:00 p.m",
-//       programa: "Noches de Café con Isabel",
-//     },
-//   ],
-//   miercoles: [
-//     {
-//       hora: "9:00 p.m - 10:00 p.m",
-//       programa: "Noches de Café con Isabel",
-//     },
-//   ],
-//   jueves: [
-//     {
-//       hora: "9:00 p.m - 10:00 p.m",
-//       programa: "Noches de Café con Isabel",
-//     },
-//   ],
-//   viernes: [
-//     {
-//       hora: "9:00 p.m - 10:00 p.m",
-//       programa: "Noches de Café con Isabel",
-//     },
-//   ],
-//   sabado: [],
-//   domingo: [],
-// };
-
-// export const Rubio = {
-//   locutor: "Speaker Motivacional y Coach de vida Rubio",
-//   lunes: [
-//     {
-//       hora: "8:00 a.m - 10:00 a.m",
-//       programa: "Inspiración para la vida",
-//     },
-//   ],
-//   martes: [
-//     {
-//       hora: "8:00 a.m - 10:00 a.m",
-//       programa: "Inspiración para la vida",
-//     },
-//   ],
-//   miercoles: [
-//     {
-//       hora: "8:00 a.m - 10:00 a.m",
-//       programa: "Inspiración para la vida",
-//     },
-//   ],
-//   jueves: [
-//     {
-//       hora: "8:00 a.m - 10:00 a.m",
-//       programa: "Inspiración para la vida",
-//     },
-//   ],
-//   viernes: [
-//     {
-//       hora: "8:00 a.m - 10:00 a.m",
-//       programa: "Inspiración para la vida",
-//     },
-//   ],
-//   sabado: [],
-//   domingo: [],
-// };

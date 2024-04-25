@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export function Post({
+export function InfoCard({
   children,
   title,
 }: {
@@ -9,8 +9,10 @@ export function Post({
 }) {
   return (
     <article className="w-64 md:w-80 rounded-sm">
-      <h5 className="w-fit bg-blue-500 text-white p-4 capitalize">{title}</h5>
-      <div className="bg-secondary text-white p-4">{children}</div>
+      <h5 className="w-fit bg-primary-dark text-white p-4 capitalize">
+        {title}
+      </h5>
+      <div className="bg-primary p-4">{children}</div>
     </article>
   );
 }

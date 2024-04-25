@@ -3,7 +3,7 @@ import type { ProgramType } from "~/types/program";
 import { redirect, type LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "react-router";
 import { programas } from "~/utils/programacion";
-import { Post } from "~/components/Post/Post";
+import { InfoCard } from "~/components/molecules/InfoCard/InfoCard";
 
 export default function Programa() {
   const program: ProgramType = useLoaderData() as ProgramType;
@@ -30,21 +30,21 @@ export default function Programa() {
 
       {/* ANCHOR Information */}
       <section className="container mx-auto flex flex-wrap justify-center gap-4 my-12 md:gap-0  md:justify-between md:my-40">
-        <Post title="Radio Chilanga">
+        <InfoCard title="Radio Chilanga">
           <p>
             Dándole un respiro a los habitantes de la Ciudad de México con
             programas clasicos desde la perspectiva más chilanga.
           </p>
-        </Post>
+        </InfoCard>
 
-        <Post title="CEO">
+        <InfoCard title="CEO">
           <p>
             Nuestro objetivo es crear contenido digital de calidad. Planeamos
             ser una de las plataformas top de Latinoamericas.
           </p>
-        </Post>
+        </InfoCard>
 
-        <Post title="¡Síguenos!">
+        <InfoCard title="¡Síguenos!">
           <a
             className="flex items-center gap-4"
             target={"blank"}
@@ -56,7 +56,7 @@ export default function Programa() {
               alt="facebook"
             />
           </a>
-        </Post>
+        </InfoCard>
       </section>
     </div>
   );

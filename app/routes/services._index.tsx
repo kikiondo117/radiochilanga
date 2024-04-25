@@ -1,9 +1,12 @@
-import { ServiceCard } from "~/components/ServiceCard/ServiceCard";
 import { WhatsAppButton } from "~/components/WhatsAppButton/WhatsAppButtonV2";
+import { Card } from "~/components/molecules/Card/Card";
+import { Fqa } from "~/components/organisms/Fqa/Fqa";
+import { Link } from "@remix-run/react";
+import { Plans } from "~/components/organisms/Plans/Plans";
 
 export default function Services() {
   const style = {
-    backgroundImage: `radial-gradient(100% 100% at -40% 130%, rgba(47, 194, 93, 0.6) 0, #fcfdfd 100%), linear-gradient(180deg, rgba(245, 245, 245, 0) 0, #edf6ff 67.19%)`,
+    backgroundImage: `radial-gradient(100% 100% at -40% 130%, rgba(47, 404, 403, 0.6) 0, #fcfdfd 100%), linear-gradient(180deg, rgba(245, 245, 245, 0) 0, #edf6ff 67.19%)`,
   };
 
   const handleClick = () => {
@@ -25,12 +28,12 @@ export default function Services() {
               Contrata tu radio en línea en solo unos minutos.
             </p>
 
-            <button
-              onClick={handleClick}
+            <Link
+              to={"/services/plans"}
               className="w-fit bg-blue-600 p-4 rounded-md uppercase text-white font-bold"
             >
               Comenzar ahora
-            </button>
+            </Link>
             <span className="text-bold">
               o{" "}
               <button onClick={handleClick} className="underline">
@@ -57,96 +60,47 @@ export default function Services() {
           crear una radio en línea
         </h2>
 
-        <div className="flex gap-4 flex-wrap p-4 md:p-0">
-          <div className="flex-1 p-4 border-[1px] border-solid border-gray-300 rounded-md">
-            <p className="font-bold text-2xl">Radio en línea</p>
-            <span>
-              Transmite en vivo o deja tu radio en piloto automático a través de
-              Auto DJ.
-            </span>
-          </div>
+        <div className="flex justify-around gap-4 flex-wrap p-4 md:p-0">
+          <Card
+            img="https://d1024mmf9dgym2.cloudfront.net/site/assets/images/index/resources/web-radio.svg?_t=0eacee8c5d"
+            alt="Radio en linea"
+            title="Radio en línea"
+            text="Transmite en vivo o deja tu radio en piloto automático a través de Auto DJ."
+          />
 
-          <div className="flex-1 p-4 border-[1px] border-solid border-gray-300 rounded-md">
-            <p className="font-bold text-2xl">Recursos web</p>
-            <span>
-              Transmite en vivo o deja tu radio en piloto automático a través de
-              Auto DJ.
-            </span>
-          </div>
+          <Card
+            img="https://d1024mmf9dgym2.cloudfront.net/site/assets/images/index/resources/cover.png?_t=0eacee8c5d"
+            alt="Recursos web"
+            title="Recursos web"
+            text="Se puede escuchar en cualquier dispositivo con acceso a tu pagina web."
+          />
 
-          <div className="flex-1 p-4 border-[1px] border-solid border-gray-300 rounded-md">
-            <p className="font-bold text-2xl">Aplicaciones y Skill</p>
-            <span>
-              Transmite en vivo o deja tu radio en piloto automático a través de
-              Auto DJ.
-            </span>
-          </div>
+          <Card
+            img="https://d1024mmf9dgym2.cloudfront.net/site/assets/images/index/resources/audio-library.svg?_t=0eacee8c5d"
+            alt="Aplicaciones y Skill"
+            title="Aplicaciones y Skill"
+            text="!Solo necesitas de una aplicación para trasmitir!"
+          />
         </div>
       </section>
 
       {/**============================================
        *               Planes Section
        *=============================================*/}
-      <section className="container mx-auto flex flex-col gap-20">
-        <h2 className="text-5xl rounded-md text-center py-8 font-semibold px-4">
-          Planes
-        </h2>
-
-        <div className="w-full flex gap-4 p-4 md:p-4 flex-wrap">
-          <ServiceCard price={249} name="Basico">
-            <li>
-              🌐 Una página de internet básica para poder transmitir tus
-              programas de radio, música y anuncios.
-            </li>
-            <li>🎧 Servicio de Auto DJ.</li>
-            <li>🎶 Espacio para música de 12 GB.</li>
-            <li>
-              👥
-              <strong> 120</strong> radioescuchas simultáneos.
-            </li>
-            <li>
-              📖 Una guía detallada para ayudarte a comenzar a transmitir.
-            </li>
-            <li>
-              💾 Ayuda con la descarga de música de 10 artistas que tú elijas.
-            </li>
-            <li>📡 128 Kbps Streaming.</li>
-            <li>🛠️ Soporte.</li>
-          </ServiceCard>
-
-          <ServiceCard black price={549} name="Intermedio">
-            <li>🌐 Una página de internet semi-personalizada.</li>
-            <li>🎧 Servicio de Auto DJ.</li>
-            <li>🎶 Espacio para música de 50 GB</li>
-            <li>
-              👥
-              <strong> 8,000</strong> radioescuchas simultáneos.
-            </li>
-            <li>
-              📖 Una guía detallada para ayudarte a comenzar a transmitir.
-            </li>
-            <li>
-              💾 Ayuda con la descarga de música de 20 artistas que tú elijas.
-            </li>
-            <li>📡 192 Kbps Streaming.</li>
-            <li>🛠️ Soporte.</li>
-          </ServiceCard>
-
-          <ServiceCard price={859} name="Experimentado">
-            <li>🌐 Una página de internet personalizada</li>
-            <li>🖥️ Nombre de dominio personalizado.</li>
-            <li>🎧 Servicio de Auto DJ.</li>
-            <li>🎶 Espacio para música ilimitado</li>
-            <li>👥 Ilimitados radioescuchas simultáneos</li>
-            <li>📖 Una guía detallada para ayudarte a comenzar a transmitir</li>
-            <li>
-              💾 Ayuda con la descarga de música de los artistas que tú elijas
-            </li>
-            <li>📡 320 Kbps Streaming</li>
-            <li>🛠️ Soporte</li>
-          </ServiceCard>
-        </div>
+      <section className="bg-[#F5F5F5] py-8 flex flex-col gap-20 w-full">
+        <Plans />
       </section>
+
+      {/**============================================
+       *               FQA Section
+       *=============================================*/}
+      <section className="flex flex-col items-center gap-4 container mx-auto px-4">
+        <Fqa />
+        <Link to="/services/fqa" className="underline text-blue-600 text-xl">
+          Más preguntas
+        </Link>
+      </section>
+      {/*=============== END OF SECTION ==============*/}
 
       {/**============================================
        *               Customer Section
@@ -157,29 +111,41 @@ export default function Services() {
         </h2>
 
         <div className="flex flex-wrap justify-around">
-          <img
-            className="w-20 h-20 md:w-40 md:h-40 rounded-full"
-            src="https://radiolobo.netlify.app/img/lobo.jpeg"
-            alt="radio lobo"
-          />
+          <div className="avatar online">
+            <div className="w-24 md:w-40 rounded-full">
+              <img
+                src="https://radiolobo.netlify.app/img/lobo.jpeg"
+                alt="radio lobo"
+              />
+            </div>
+          </div>
 
-          <img
-            className="w-20 h-20 md:w-40 md:h-40 rounded-full"
-            src="https://jesus-en-ti.netlify.app/img/jesus.jpeg"
-            alt="radio lobo"
-          />
+          <div className="avatar online">
+            <div className="w-24 md:w-40 rounded-full">
+              <img
+                src="https://jesus-en-ti.netlify.app/img/jesus.jpeg"
+                alt="jesus en ti confio"
+              />
+            </div>
+          </div>
 
-          <img
-            className="w-20 h-20 md:w-40 md:h-40 rounded-full"
-            src="https://radio-hills.netlify.app/img/logo.jpeg"
-            alt="radio lobo"
-          />
+          <div className="avatar online">
+            <div className="w-24 md:w-40 rounded-full">
+              <img
+                src="https://radio-hills.netlify.app/img/logo.jpeg"
+                alt="radio hills"
+              />
+            </div>
+          </div>
 
-          <img
-            className="w-20 h-20 md:w-40 md:h-40 rounded-full"
-            src="https://radio-explosiva.netlify.app/img/logo.jpeg"
-            alt="radio lobo"
-          />
+          <div className="avatar online">
+            <div className="w-24 md:w-40 rounded-full">
+              <img
+                src="https://radio-explosiva.netlify.app/img/logo.jpeg"
+                alt="radio explosiva"
+              />
+            </div>
+          </div>
         </div>
       </section>
       {/*=============== END OF SECTION ==============*/}
