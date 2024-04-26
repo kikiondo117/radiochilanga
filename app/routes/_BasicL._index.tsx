@@ -12,9 +12,15 @@ import { Link } from "@remix-run/react";
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-20 mt-20">
       <section id="play" className="flex flex-col items-center md:gap-8">
-        <img src="/img/slogan.png" alt="" className="h-40 md:h-52 md:w-1/2" />
+        <div className="bg-black rounded-full">
+          <img
+            src="/img/logo/logo.png"
+            alt=""
+            className="h-40 md:w-64 md:h-64"
+          />
+        </div>
 
         <div className="my-8 md:m-0">
           <Player />
@@ -148,6 +154,9 @@ export default function Index() {
 export const meta: V2_MetaFunction = () => {
   return [
     { title: "Radio Chilanga" },
-    { name: "description", content: "Radio Mexican" },
+    {
+      name: "description",
+      content: "Radio Mexican, musica variada con los mejores locutores.",
+    },
   ];
 };
