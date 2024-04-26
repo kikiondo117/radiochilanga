@@ -10,7 +10,7 @@ import {
 } from "@remix-run/react";
 // * Styles
 import talwindStyles from "./styles/app.css";
-import globalStyles from "./styles/global.css";
+// import globalStyles from "./styles/global.css";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),

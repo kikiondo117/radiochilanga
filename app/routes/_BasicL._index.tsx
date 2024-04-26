@@ -5,7 +5,7 @@ import * as programming from "~/utils/programacion";
 
 // * Custom Components
 import { Player } from "~/components/Player/Player";
-import { Section } from "~/components/Section/Section";
+import { Section } from "~/components/molecules/Section/Section";
 import { Host } from "~/components/Host/Host";
 import { InfoCard } from "~/components/molecules/InfoCard/InfoCard";
 import { Link } from "@remix-run/react";
@@ -36,8 +36,8 @@ export default function Index() {
             return (
               <Link
                 to={`/program/${programa.id}`}
-                key={programa.locutor}
-                className={`bg-gray-special rounded-sm flex-1 min-w-[300px] h-64 md:w-[25em] capitalize 
+                key={programa.nombre}
+                className={`bg-gray-special rounded-sm flex-1 min-w-[300px] h-64 md:w-[25em] max-w-[25em] capitalize 
                  cursor-pointer  bg-cover bg-center ${programa.image}`}
               >
                 <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
@@ -110,9 +110,9 @@ export default function Index() {
           height="450"
           allowtransparency="yes"
           allow="autoplay"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
+          frameBorder={0}
+          marginHeight={0}
+          marginWidth={0}
           scrolling="auto"
         ></iframe>
       </section>

@@ -17,7 +17,11 @@ export default function RadioService() {
   };
 
   return (
-    <div className="bg-white flex flex-col gap-32">
+    <div className="relative bg-white flex flex-col gap-32">
+      <Link to="/services" className="absolute left-4 top-6 underline">
+        Regresar
+      </Link>
+
       <main className="h-[500px] flex" style={style}>
         <div className="flex container mx-auto p-4 md:p-0">
           <div className=" flex flex-col justify-center gap-6">

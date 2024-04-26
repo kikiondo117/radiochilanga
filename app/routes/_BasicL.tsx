@@ -1,10 +1,17 @@
-import { Link, Outlet } from "@remix-run/react";
+import { Link, Outlet, useLocation } from "@remix-run/react";
 import { Navbar } from "~/components/NavBar/Navbar";
+import cn from "~/utils/cn";
 // import { WhatsAppButton } from "~/components/WhatsAppButton/WhatAppButton";
 
 export default function HomeLayout() {
+  const { pathname } = useLocation();
+
   return (
-    <div className="bg-patron flex flex-col gap-4">
+    <div
+      className={cn("relative flex flex-col gap-4", {
+        "bg-patron": pathname === "/",
+      })}
+    >
       <div className="px-16 md:mx-auto container">
         <header className="py-4">
           <Navbar />

@@ -1912,6 +1912,21 @@ details.collapse summary::-webkit-details-marker {
   margin-bottom: 2rem;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-28 {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -2017,6 +2032,14 @@ details.collapse summary::-webkit-details-marker {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2062,12 +2085,28 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
 .min-w-\[300px\] {
   min-width: 300px;
 }
 
+.max-w-\[25em\] {
+  max-width: 25em;
+}
+
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-1 {
@@ -2513,6 +2552,11 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-primary-dark {
+  --tw-text-opacity: 1;
+  color: rgb(1 8 72 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2546,30 +2590,12 @@ details.collapse summary::-webkit-details-marker {
 }
 
 :root {
-  --font-display: 'Exo 2', sans-serif;
-  --color-background: #e3e3e3;
   --color-foreground: #022235;
-}
-
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 html,
 body {
-  overflow-x: hidden;
-  padding: 0;
-  margin: 0;
   color: var(--color-foreground);
-  background-color: var(--color-background);
-  font-family: var(--font-display);
 }
 
 .hover\:translate-y-9:hover {
@@ -2623,6 +2649,10 @@ body {
     height: 20rem;
   }
 
+  .md\:h-32 {
+    height: 8rem;
+  }
+
   .md\:w-40 {
     width: 10rem;
   }
@@ -2641,6 +2671,10 @@ body {
 
   .md\:w-\[25em\] {
     width: 25em;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
   }
 
   .md\:flex-1 {
