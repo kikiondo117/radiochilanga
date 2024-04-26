@@ -9,13 +9,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 // * Styles
-import talwindStyles from "./tailwind.css";
+import talwindStyles from "./styles/app.css";
 import globalStyles from "./styles/global.css";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: talwindStyles },
-  { rel: "stylesheet", href: globalStyles },
+  // { rel: "stylesheet", href: globalStyles },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   { rel: "preconnect", href: "https://fonts.gstatic.com" },
   {
