@@ -8,7 +8,7 @@ export function Host(props: {
   return (
     <div
       className={twMerge(
-        "flex flex-col justify-end w-60 h-60  md:w-80 md:h-80 bg-gray-special hover:opacity-90 cursor-pointer",
+        "flex flex-col justify-end w-60  bg-gray-special hover:opacity-90 cursor-pointer",
         props.className
       )}
     >

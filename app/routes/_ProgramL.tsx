@@ -10,16 +10,9 @@ export default function ProgramLayout() {
 
       <Outlet />
 
-      <footer className="flex justify-around h-16">
-        <p className="bg-black w-full text-sm md:text-base xl:w-1/4 text-white flex justify-end  items-center p-4">
-          Radiochilanga © 2023. Todos los derechos reservados.
-        </p>
-        <Link
-          to="/nani"
-          className="bg-gray-special w-full  xl:w-3/4 flex items-center p-4"
-        >
-          <p>Aviso de privacidad</p>
-        </Link>
+      <footer className="flex justify-around items-center h-16 bg-black text-white ">
+        <p className="">Radiochilanga © 2024. Todos los derechos reservados.</p>
+        <p className="">Aviso de privacidad</p>
       </footer>
     </>
   );

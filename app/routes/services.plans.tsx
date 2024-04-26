@@ -37,7 +37,7 @@ export default function PlansPage() {
             className="underline text-blue-600"
             onClick={() => handleClick()}
           >
-            Solicitar Contacto de ventas
+            Solicitar contacto de ventas
           </button>
         </p>
       </div>

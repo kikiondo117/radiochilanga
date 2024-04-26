@@ -16,11 +16,11 @@ export function ServiceCard({
       className={cn(
         " bg-white border-solid border-[1px] border-gray-400 p-8 rounded-xl flex-1 flex flex-col gap-4 indicator",
         {
-          "bg-blue-950 text-white": black,
+          "bg-primary-dark text-white": black,
         }
       )}
     >
-      <span className="indicator-item badge badge-primary">new</span>
+      <span className="indicator-item badge bg-secondary text-white">new</span>
 
       <div>
         <p className="m-0 p-0 flex-1 text-2xl font-bold mb-4">{name}</p>

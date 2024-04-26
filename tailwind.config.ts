@@ -13,10 +13,9 @@ export default {
         'primary-dark': '#010848',
       
         'secondary': '#FE008A',
-        'secondary-light': '#022235',
-        'secondary-dark': '#022235',
+        'secondary-light': '#FF00A6',
+        'secondary-dark': '#CB006E',
 
-        'gray-special': '#e3e3e3'
 
       },
       backgroundImage: {
@@ -35,7 +34,7 @@ export default {
 
         manuel: 'url(/img/manuel-vera.jpeg)',
         kikis: 'url(/img/kikis.jpeg)',
-        kikis2: 'url(/img/locutores/kikis.PNG)',
+        erik: 'url(/img/locutores/erik_casado.png)',
         mau: 'url(/img/locutores/mauricio.jpeg)'
       },
     },

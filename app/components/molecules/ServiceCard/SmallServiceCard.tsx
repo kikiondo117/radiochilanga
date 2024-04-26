@@ -1,12 +1,12 @@
-export function SmallServiceCard({ price, content, onClick }: any) {
+export function SmallServiceCard({ price, content, onClick, title }: any) {
   return (
     <div className="bg-white card card-compact w-96 shadow-xl py-4">
       <div className="flex flex-col justify-center items-center py-8 md:py-16">
-        <p className="card-title">Basico</p>
-        <p className="text-blue-500 text-6xl md:text-7xl font-semibold">
+        <p className="card-title">{title}</p>
+        <p className="text-secondary text-6xl md:text-7xl font-semibold">
           {price}$
         </p>
-        <p className="text-blue-500">Por mes</p>
+        <p className="text-primary-dark">MX / Por mes</p>
       </div>
 
       <div className="card-body gap-4">

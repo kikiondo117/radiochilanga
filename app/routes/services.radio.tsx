@@ -3,6 +3,7 @@ import { Card } from "~/components/molecules/Card/Card";
 import { Fqa } from "~/components/organisms/Fqa/Fqa";
 import { Link } from "@remix-run/react";
 import { Plans } from "~/components/organisms/Plans/Plans";
+import { BattlePass } from "~/components/organisms/BattlePass/BattlePass";
 
 export default function RadioService() {
   const style = {
@@ -34,7 +35,7 @@ export default function RadioService() {
 
             <Link
               to={"/services/plans"}
-              className="w-fit bg-blue-600 p-4 rounded-md uppercase text-white font-bold"
+              className="w-fit bg-secondary p-4 rounded-md uppercase text-white font-bold"
             >
               Comenzar ahora
             </Link>
@@ -96,6 +97,19 @@ export default function RadioService() {
       </section>
 
       {/**============================================
+       *               BattlePass
+       *=============================================*/}
+      {/* <section>
+        <h2 className="text-4xl md:text-4xl text-center pb-8 font-semibold bg-white border-solid px-4">
+          Tenemos regalos para nuestros clientes más frecuentes
+        </h2>
+
+        <div className="flex justify-center">
+          <BattlePass />
+        </div>
+      </section> */}
+
+      {/**============================================
        *               FQA Section
        *=============================================*/}
       <section className="flex flex-col items-center gap-4 container mx-auto px-4">
@@ -104,7 +118,6 @@ export default function RadioService() {
           Más preguntas
         </Link>
       </section>
-      {/*=============== END OF SECTION ==============*/}
 
       {/**============================================
        *               Customer Section
@@ -152,7 +165,6 @@ export default function RadioService() {
           </div>
         </div>
       </section>
-      {/*=============== END OF SECTION ==============*/}
 
       {/**============================================
        *               Contact Section
@@ -168,7 +180,6 @@ export default function RadioService() {
           </div>
         </div>
       </section>
-      {/*=============== END OF SECTION ==============*/}
     </div>
   );
 }

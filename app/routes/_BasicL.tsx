@@ -8,29 +8,22 @@ export default function HomeLayout() {
 
   return (
     <div
-      className={cn("relative flex flex-col gap-4", {
+      className={cn("relative flex flex-col", {
         "bg-patron": pathname === "/",
       })}
     >
-      <div className="px-16 md:mx-auto container">
-        <header className="py-4">
+      <header className="py-4 absolute left-0 right-0 m-auto container">
+        <div className="px-6 md:px-0">
           <Navbar />
-        </header>
-        {/* <WhatsAppButton phoneNumber="52 55 8795 2622" /> */}
+        </div>
+      </header>
+      {/* <WhatsAppButton phoneNumber="52 55 8795 2622" /> */}
 
-        <Outlet />
-      </div>
+      <Outlet />
 
-      <footer className="flex justify-around h-16">
-        <p className="bg-black w-full text-sm md:text-base xl:w-1/4 text-white flex justify-end  items-center p-4">
-          Radiochilanga © 2023. Todos los derechos reservados.
-        </p>
-        <Link
-          to="/nani"
-          className="bg-gray-special w-full  xl:w-3/4 flex items-center p-4"
-        >
-          <p>Aviso de privacidad</p>
-        </Link>
+      <footer className="text-xs  md:text-base flex justify-around items-center h-16 bg-black text-white ">
+        <p>Radiochilanga © 2024. Todos los derechos reservados.</p>
+        <p>Aviso de privacidad</p>
       </footer>
     </div>
   );
