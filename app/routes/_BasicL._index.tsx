@@ -21,7 +21,7 @@ export default function Index() {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
+          <div className="max-w-md mt-20">
             <h1 className="mb-5 text-5xl font-bold">
               <span className="text-secondary">Radio</span>{" "}
               <span className="text-primary">Chilanga</span>
@@ -31,7 +31,7 @@ export default function Index() {
               moda. Descubre los sonidos del México eterno, donde la tradición
               musical vive y resuena.
             </p>
-            <div className="my-8 md:m-0">
+            <div className="mb-8 md:m-0 flex flex-col gap-6 items-center">
               <Player />
             </div>
           </div>

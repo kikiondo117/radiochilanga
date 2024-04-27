@@ -5,15 +5,25 @@ import { motion } from "framer-motion";
 // * Custom Components
 import { BsPlayCircle, BsPauseCircle } from "react-icons/bs";
 import { asura } from "~/utils/radio_host";
+import cn from "~/utils/cn";
+// import { Canvas } from "../molecules/Canvas/Canvas";
 
 export function Player() {
   const audioRef = React.useRef(null);
-  const { isPlay, handlePlay, handlePause } = usePlayer(audioRef);
+  const canvasRef = React.useRef(null);
+
+  const { isPlay, handlePlay, handlePause } = usePlayer(audioRef, canvasRef);
 
   return (
     <>
-      <audio ref={audioRef} style={{ display: "none" }} src={asura} controls />
-
+      {isPlay && <canvas ref={canvasRef} />}
+      <audio
+        crossOrigin="anonymous"
+        ref={audioRef}
+        style={{ display: "none" }}
+        src={asura}
+        controls
+      />
       {isPlay ? (
         <button onClick={handlePause}>
           <BsPauseCircle
