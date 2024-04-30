@@ -16,9 +16,9 @@ export function Card({
   imgStyle?: string;
 }) {
   return (
-    <div className="card bg-white shadow-xl">
-      <figure className="px-10 pt-10">
-        <img src={img} alt={alt} className={cn("rounded-xl h-14", imgStyle)} />
+    <div className="card bg-white shadow-xl md:w-96">
+      <figure className={cn("", imgStyle)}>
+        <img src={img} alt={alt} className={cn("rounded-xl")} />
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">{title}</h2>

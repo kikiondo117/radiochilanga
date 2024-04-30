@@ -8,16 +8,35 @@ function usePlayer(audioRef, canvasRef) {
   const animationId = useRef(null);
 
   useEffect(() => {
-    // Asegúrate de que el elemento audio está disponible y aún no ha sido inicializado
     if (audioRef.current && !audioContext.current) {
+      // * CREAMOS EL CONTEXT
       audioContext.current = new (window.AudioContext ||
         window.webkitAudioContext)();
+      /**
+       ** CREAMOS EL createMediaElementSource
+       ** Esto lo que hace es crear un nodo de fuente de audio esto permite que el audio
+       ** reproducido en el html sea manipulado o analizado por AudioContext
+       */
       const source = audioContext.current.createMediaElementSource(
         audioRef.current
       );
+      /**
+       ** El analyser es una herramienta dentro de la API Web Audio API que permite
+       ** visualizar y analizar datos en tiempo real, en la siguiente linea
+       ** creamos un AnalyserNode
+       */
       analyser.current = audioContext.current.createAnalyser();
+      /**
+       ** Conectamos el Source con el Analyser
+       ** Y conectamos el analyser al destino que normalmente son las bocinas del dispositivo
+       */
       source.connect(analyser.current);
       analyser.current.connect(audioContext.current.destination);
+      /**
+       ** FTP Size
+       ** Este determina el tamaño de Transformada Rápida de Fourier (FFT)
+       ** Un tamaño de FFT de 256 proporciona 128 bandas de frecuencia
+       */
       analyser.current.fftSize = 256;
     }
   }, [audioRef]);

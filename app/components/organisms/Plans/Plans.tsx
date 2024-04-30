@@ -14,6 +14,7 @@ export function Plans() {
             de radio, música y anuncios.
           </li>
           <li>🎧 Servicio de Auto DJ.</li>
+          <li>🌏 Ilimitado Bandwidth.</li>
           <li>🎶 Espacio para música de 12 GB.</li>
           <li>
             👥
@@ -30,6 +31,7 @@ export function Plans() {
         <ServiceCard black price={549} name="Intermedio">
           <li>🌐 Una página de internet semi-personalizada.</li>
           <li>🎧 Servicio de Auto DJ.</li>
+          <li>🌏 20 GB Bandwidth.</li>
           <li>🎶 Espacio para música de 50 GB</li>
           <li>
             👥
@@ -47,6 +49,7 @@ export function Plans() {
           <li>🌐 Una página de internet personalizada</li>
           <li>🖥️ Nombre de dominio personalizado.</li>
           <li>🎧 Servicio de Auto DJ.</li>
+          <li>🌏 Ilimitado Bandwidth.</li>
           <li>🎶 Espacio para música ilimitado</li>
           <li>👥 Ilimitados radioescuchas simultáneos</li>
           <li>📖 Una guía detallada para ayudarte a comenzar a transmitir</li>
