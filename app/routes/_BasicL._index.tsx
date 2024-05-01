@@ -26,7 +26,7 @@ export default function Index() {
               <span className="text-secondary">Radio</span>{" "}
               <span className="text-primary">Chilanga</span>
             </h1>
-            <p className="mb-5">
+            <p className="mb-5 text-white">
               Sintoniza y viaja en el tiempo con los clásicos que nunca pasan de
               moda. Descubre los sonidos del México eterno, donde la tradición
               musical vive y resuena.

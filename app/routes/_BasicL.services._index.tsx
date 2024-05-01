@@ -35,7 +35,7 @@ export default function Services() {
 
         <Link to="/services/radio">
           <Card
-            imgStyle="mx-auto h-32  bg-red-500"
+            imgStyle="mx-auto h-32"
             img="/img/services/radio2.jpg"
             alt="Servicio Radio Online"
             title="Radio online"
