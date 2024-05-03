@@ -5,6 +5,7 @@ import { Fqa } from "~/components/organisms/Fqa/Fqa";
 import { Link } from "@remix-run/react";
 import { Plans } from "~/components/organisms/Plans/Plans";
 import { BattlePass } from "~/components/organisms/BattlePass/BattlePass";
+import { TablePlans } from "~/components/molecules/TablePlans/TablePlans";
 
 export default function RadioService() {
   const style = {
@@ -93,12 +94,12 @@ export default function RadioService() {
       {/**============================================
        *               Planes Section
        *=============================================*/}
-      <section
+      {/* <section
         id="planes"
-        className="bg-[#F5F5F5] py-8 flex flex-col gap-20 w-full"
+        className=" bg-[#F5F5F5] py-8 flex flex-col gap-20 w-full"
       >
         <Plans />
-      </section>
+      </section> */}
 
       {/**============================================
        *               BattlePass
@@ -126,7 +127,7 @@ export default function RadioService() {
       {/**============================================
        *               Customer Section
        *=============================================*/}
-      <section className="container mx-auto flex flex-col gap-20">
+      <section className="container mx-auto flex flex-col gap-20 pb-20">
         <h2 className="text-4xl md:text-5xl text-center py-8 font-semibold bg-white border-solid px-4">
           Nuestros clientes más activos
         </h2>
@@ -173,7 +174,7 @@ export default function RadioService() {
       {/**============================================
        *               Contact Section
        *=============================================*/}
-      <section className="container mx-auto flex flex-col gap-20 mb-24">
+      {/* <section className="container mx-auto flex flex-col gap-20 mb-24">
         <div className="flex flex-col items-center gap-4 mt-8">
           <h2 className="text-3xl md:text-5xl rounded-md text-center py-8 font-semibold  px-4">
             ¿Interezad@?
@@ -183,7 +184,7 @@ export default function RadioService() {
             <WhatsAppButton phoneNumber="+523122709176" />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { SmallServiceCard } from "~/components/molecules/ServiceCard/SmallServiceCard";
+import { TablePlans } from "~/components/molecules/TablePlans/TablePlans";
 import { Footer } from "~/components/organisms/Footer/Footer";
 
 export default function PlansPage() {
@@ -23,12 +24,16 @@ export default function PlansPage() {
   };
 
   return (
-    <div className="relative">
+    <div>
       {/* <Link to="/services/radio" className="absolute left-4 top-6 underline">
         Regresar
       </Link> */}
 
-      <div className="mx-auto flex flex-col gap-20 pb-20" style={style}>
+      <div
+        id="plans"
+        className="mx-auto flex flex-col gap-20 pb-20"
+        style={style}
+      >
         <main className="flex flex-col items-center gap-4">
           <h1 className="text-4xl md:text-5xl text-center pb-8 font-semibold  border-solid px-4">
             Elija un plan para comenzar
@@ -68,6 +73,10 @@ export default function PlansPage() {
           />
         </section>
       </div>
+
+      <section className="container mx-auto px-4 py-20">
+        <TablePlans />
+      </section>
     </div>
   );
 }

@@ -18,8 +18,7 @@ export function NavbarServices() {
       <ul className="ml-auto md:m-0 flex gap-2">
         <li>
           <LinkButton
-            to={pathname === "/services/radio" ? "#planes" : "/services/radio"}
-            variant={pathname === "/services" ? "secondary" : "primary"}
+            to={pathname === "/services/plans" ? "#plans" : "/services/plans"}
           >
             <span>Planes</span>
           </LinkButton>
