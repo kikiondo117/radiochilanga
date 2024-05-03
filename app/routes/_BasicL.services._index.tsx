@@ -51,7 +51,7 @@ export default function Services() {
           <img
             src="/img/services/radio2.avif"
             alt="Spots publicitarios"
-            className="w-full h-full"
+            className="w-full h-full object-cover"
           />
         </div>
       </Link>

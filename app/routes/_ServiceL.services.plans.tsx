@@ -19,16 +19,16 @@ export default function PlansPage() {
   };
 
   const style = {
-    backgroundImage: `radial-gradient(100% 100% at -40% 130%, rgba(47, 404, 403, 0.6) 0, #fcfdfd 100%), linear-gradient(180deg, rgba(245, 245, 245, 0) 0, #edf6ff 67.19%)`,
+    backgroundImage: `radial-gradient(100% 100% at -40% 130%, rgba(220,0,130, 0.6) 0, #fcfdfd 100%), linear-gradient(180deg, rgba(245, 245, 245, 0) 0, #edf6ff 67.19%)`,
   };
 
   return (
-    <div className="relative ">
-      <Link to="/services/radio" className="absolute left-4 top-6 underline">
+    <div className="relative">
+      {/* <Link to="/services/radio" className="absolute left-4 top-6 underline">
         Regresar
-      </Link>
+      </Link> */}
 
-      <div className="mx-auto py-20 flex flex-col gap-20" style={style}>
+      <div className="mx-auto flex flex-col gap-20 pb-20" style={style}>
         <main className="flex flex-col items-center gap-4">
           <h1 className="text-4xl md:text-5xl text-center pb-8 font-semibold  border-solid px-4">
             Elija un plan para comenzar
@@ -68,8 +68,6 @@ export default function PlansPage() {
           />
         </section>
       </div>
-
-      <Footer />
     </div>
   );
 }

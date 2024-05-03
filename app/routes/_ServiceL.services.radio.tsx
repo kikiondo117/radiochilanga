@@ -5,11 +5,10 @@ import { Fqa } from "~/components/organisms/Fqa/Fqa";
 import { Link } from "@remix-run/react";
 import { Plans } from "~/components/organisms/Plans/Plans";
 import { BattlePass } from "~/components/organisms/BattlePass/BattlePass";
-import { Footer } from "~/components/organisms/Footer/Footer";
 
 export default function RadioService() {
   const style = {
-    backgroundImage: `radial-gradient(100% 100% at -40% 130%, rgba(47, 404, 403, 0.6) 0, #fcfdfd 100%), linear-gradient(180deg, rgba(245, 245, 245, 0) 0, #edf6ff 67.19%)`,
+    backgroundImage: `radial-gradient(100% 100% at -40% 130%, rgba(220,0,130, 0.6) 0, #fcfdfd 100%), linear-gradient(180deg, rgba(245, 245, 245, 0) 0, #edf6ff 67.19%)`,
   };
 
   const handleClick = () => {
@@ -21,11 +20,11 @@ export default function RadioService() {
 
   return (
     <div className="relative bg-white flex flex-col gap-32">
-      <Link to="/services" className="absolute left-4 top-6 underline">
+      {/* <Link to="/services" className="absolute left-4 top-6 underline">
         Regresar
-      </Link>
+      </Link> */}
 
-      <main className="h-[500px] flex" style={style}>
+      <main className="h-[90vh] flex" style={style}>
         <div className="flex container mx-auto p-4 md:p-0">
           <div className=" flex flex-col justify-center gap-6">
             <h1 className="text-5xl font-bold">
@@ -94,7 +93,10 @@ export default function RadioService() {
       {/**============================================
        *               Planes Section
        *=============================================*/}
-      <section className="bg-[#F5F5F5] py-8 flex flex-col gap-20 w-full">
+      <section
+        id="planes"
+        className="bg-[#F5F5F5] py-8 flex flex-col gap-20 w-full"
+      >
         <Plans />
       </section>
 
@@ -182,8 +184,6 @@ export default function RadioService() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
