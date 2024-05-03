@@ -1,9 +1,11 @@
+import type { V2_MetaFunction } from "@remix-run/node";
 import { WhatsAppButton } from "~/components/WhatsAppButton/WhatsAppButtonV2";
 import { Card } from "~/components/molecules/Card/Card";
 import { Fqa } from "~/components/organisms/Fqa/Fqa";
 import { Link } from "@remix-run/react";
 import { Plans } from "~/components/organisms/Plans/Plans";
 import { BattlePass } from "~/components/organisms/BattlePass/BattlePass";
+import { Footer } from "~/components/organisms/Footer/Footer";
 
 export default function RadioService() {
   const style = {
@@ -180,6 +182,19 @@ export default function RadioService() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "Crea tu propia radio online" },
+    {
+      name: "description",
+      content:
+        "¿Te gustaría tener tu propia radio online y solo preocuparte por trasmitir?, esta puede ser tu mejor opción.",
+    },
+  ];
+};

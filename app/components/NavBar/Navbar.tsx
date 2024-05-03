@@ -1,6 +1,9 @@
-import { Link } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
+import { LinkButton } from "../atom/LinkButton/LinkButton";
 
 export function Navbar() {
+  const { pathname } = useLocation();
+
   return (
     <nav className="bg-transparent flex flex-wrap gap-4  justify-between items-center">
       <Link to="/" className="flex gap-2">
@@ -12,16 +15,22 @@ export function Navbar() {
         {/* <img src="/img/icons/muerto.png" alt="" className=" w-12 h-12" /> */}
       </Link>
 
-      <ul className="ml-auto md:m-0 flex gap-1">
-        <li className="bg-primary-dark text-white hover:text-primary-dark hover:bg-primary transition-all ease-in-out duration-300">
-          <Link className="p-4" to="/">
-            Programas
-          </Link>
+      <ul className="ml-auto md:m-0 flex gap-2">
+        <li>
+          <LinkButton
+            to={pathname === "/" ? "#programs" : "/"}
+            variant={pathname === "/services" ? "secondary" : "primary"}
+          >
+            <span>Programas</span>
+          </LinkButton>
         </li>
-        <li className="bg-primary-dark text-white  hover:text-primary-dark hover:bg-primary transition-all ease-in-out duration-300">
-          <Link className="p-4" to="/services">
-            Servicios
-          </Link>
+        <li>
+          <LinkButton
+            to="/services"
+            variant={pathname === "/services" ? "secondary" : "primary"}
+          >
+            <span>Servicios</span>
+          </LinkButton>
         </li>
       </ul>
     </nav>

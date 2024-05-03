@@ -1,5 +1,7 @@
+import type { V2_MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { SmallServiceCard } from "~/components/molecules/ServiceCard/SmallServiceCard";
+import { Footer } from "~/components/organisms/Footer/Footer";
 
 export default function PlansPage() {
   const handleClick = (plan?: number) => {
@@ -21,49 +23,64 @@ export default function PlansPage() {
   };
 
   return (
-    <main className="relative mx-auto py-20 flex flex-col gap-20" style={style}>
-      <Link to="/services" className="absolute left-4 top-6 underline">
+    <div className="relative ">
+      <Link to="/services/radio" className="absolute left-4 top-6 underline">
         Regresar
       </Link>
 
-      <div className="flex flex-col items-center gap-4">
-        <h1 className="text-4xl md:text-5xl text-center pb-8 font-semibold  border-solid px-4">
-          Elija un plan para comenzar
-        </h1>
+      <div className="mx-auto py-20 flex flex-col gap-20" style={style}>
+        <main className="flex flex-col items-center gap-4">
+          <h1 className="text-4xl md:text-5xl text-center pb-8 font-semibold  border-solid px-4">
+            Elija un plan para comenzar
+          </h1>
 
-        <p className="flex flex-wrap justify-center md:gap-2 gap-0">
-          ¿Necesitas ayuda para elegir?{" "}
-          <button
-            className="underline text-blue-600"
-            onClick={() => handleClick()}
-          >
-            Solicitar contacto de ventas
-          </button>
-        </p>
+          <p className="flex flex-wrap justify-center md:gap-2 gap-0">
+            ¿Necesitas ayuda para elegir?{" "}
+            <button
+              className="underline text-blue-600"
+              onClick={() => handleClick()}
+            >
+              Solicitar contacto de ventas
+            </button>
+          </p>
+        </main>
+
+        <section className="flex flex-wrap gap-4 justify-center  p-4">
+          <SmallServiceCard
+            price="249"
+            title="Basico"
+            content="Ideal para principiantes o profesionales que inician un proyecto de radio en línea"
+            onClick={() => handleClick(249)}
+          />
+
+          <SmallServiceCard
+            price="549"
+            title="Intermedio"
+            content="Perfecto para emisoras que quieren llegar a su audiencia en cualquier parte del mundo"
+            onClick={() => handleClick(549)}
+          />
+
+          <SmallServiceCard
+            price="859"
+            title="Experimentado"
+            content="Diseñado para emisoras que necesitan mayor calidad de audio y rendimiento mensual"
+            onClick={() => handleClick(859)}
+          />
+        </section>
       </div>
 
-      <section className="flex flex-wrap gap-4 justify-center  p-4">
-        <SmallServiceCard
-          price="249"
-          title="Basico"
-          content="Ideal para principiantes o profesionales que inician un proyecto de radio en línea"
-          onClick={() => handleClick(249)}
-        />
-
-        <SmallServiceCard
-          price="549"
-          title="Intermedio"
-          content="Perfecto para emisoras que quieren llegar a su audiencia en cualquier parte del mundo"
-          onClick={() => handleClick(549)}
-        />
-
-        <SmallServiceCard
-          price="859"
-          title="Experimentado"
-          content="Diseñado para emisoras que necesitan mayor calidad de audio y rendimiento mensual"
-          onClick={() => handleClick(859)}
-        />
-      </section>
-    </main>
+      <Footer />
+    </div>
   );
 }
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "Planes de Radio online" },
+    {
+      name: "description",
+      content:
+        "Estos son los planes que manejamos para que puedas crear tu propia radio online",
+    },
+  ];
+};

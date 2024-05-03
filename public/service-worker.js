@@ -11,7 +11,8 @@ const urlsToCache = [
 
 
   '/img/services/anuncios.jpg',
-  'img/services/radio2.jpg'
+  '/img/services/radio2.jpg',
+  '/img/services/radio2.avif'
 ];
 
 self.addEventListener('install', (event) => {

@@ -11,11 +11,11 @@ export default {
         'primary': '#1BF7EF',
         'primary-light': '#D4FDFF',
         'primary-dark': '#010848',
+        'primary-super-dark': '#000123',
       
         'secondary': '#FE008A',
         'secondary-light': '#FF00A6',
         'secondary-dark': '#CB006E',
-
 
       },
       backgroundImage: {

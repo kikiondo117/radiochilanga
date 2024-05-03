@@ -52,7 +52,7 @@ export const meta: V2_MetaFunction = () => {
     { title: "Preguntas frecuentes" },
     {
       name: "description",
-      content: "Preguntas frecuentes de nuestro servicio de radio online",
+      content: "Preguntas frecuentes sobre nuestro servicio de radio online",
     },
   ];
 };

@@ -8,6 +8,7 @@ import { Section } from "~/components/molecules/Section/Section";
 import { Host } from "~/components/molecules/Host/Host";
 import { InfoCard } from "~/components/molecules/InfoCard/InfoCard";
 import { Link } from "@remix-run/react";
+import { PlayerV2 } from "~/components/Player/PlayerV2";
 
 export default function Index() {
   return (
@@ -33,6 +34,7 @@ export default function Index() {
             </p>
             <div className="mb-8 md:m-0 flex flex-col gap-6 items-center">
               <Player />
+              {/* <PlayerV2 /> */}
             </div>
           </div>
         </div>
@@ -40,7 +42,7 @@ export default function Index() {
 
       <div className="md:mx-auto container flex flex-col gap-20">
         {/* ANCHOR PROGRAMAS */}
-        <section className="mx-6 md:mx-0">
+        <section id="programs" className="mx-6 md:mx-0">
           <Section title="Nuestros programas" subtitle="de lunes a viernes" />
 
           <div className="flex flex-wrap justify-center md:justify-between mt-12 gap-6">

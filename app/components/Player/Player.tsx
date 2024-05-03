@@ -5,14 +5,23 @@ import { motion } from "framer-motion";
 // * Custom Components
 import { BsPlayCircle, BsPauseCircle } from "react-icons/bs";
 import { asura } from "~/utils/radio_host";
-import cn from "~/utils/cn";
+import { IoIosVolumeHigh } from "react-icons/io/index";
 // import { Canvas } from "../molecules/Canvas/Canvas";
+import "react-h5-audio-player/lib/styles.css";
 
 export function Player() {
   const audioRef = React.useRef(null);
   const canvasRef = React.useRef(null);
+  const volumRef = React.useRef(null);
 
-  const { isPlay, handlePlay, handlePause } = usePlayer(audioRef, canvasRef);
+  const { isPlay, handlePlay, handlePause } = usePlayer({
+    audioRef,
+    canvasRef,
+  });
+
+  const handleValume = (element: any) => {
+    audioRef.current.volume = element.target.value * 0.01;
+  };
 
   return (
     <>
@@ -24,14 +33,29 @@ export function Player() {
         src={asura}
         controls
       />
+
       {isPlay ? (
-        <button onClick={handlePause}>
-          <BsPauseCircle
-            role="button"
-            tabIndex={0}
-            className="bg-white rounded-full text-blue text-8xl"
-          />
-        </button>
+        <div className="flex items-center gap-4 bg-white px-4 py-2 rounded-md">
+          <button onClick={handlePause}>
+            <BsPauseCircle
+              role="button"
+              tabIndex={0}
+              className="bg-white rounded-full text-blue text-5xl"
+            />
+          </button>
+
+          <div className="flex items-center gap-2 ">
+            <IoIosVolumeHigh className="text-5xl" />
+            <input
+              onChange={handleValume}
+              ref={volumRef}
+              type="range"
+              min={0}
+              max="100"
+              className="range range-accent range-xs"
+            />
+          </div>
+        </div>
       ) : (
         <motion.button
           animate={{

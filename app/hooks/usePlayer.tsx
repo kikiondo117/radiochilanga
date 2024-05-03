@@ -1,11 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 
-function usePlayer(audioRef, canvasRef) {
+interface UsePlayerProps {
+  audioRef: RefObject<HTMLAudioElement>;
+  canvasRef: RefObject<HTMLCanvasElement>;
+}
+
+function usePlayer({ audioRef, canvasRef }: UsePlayerProps) {
   const firstPlay = useRef(true);
   const [isPlay, setIsPlay] = useState(false);
-  const audioContext = useRef(null);
-  const analyser = useRef(null);
-  const animationId = useRef(null);
+  const audioContext = useRef<AudioContext | null>(null);
+  const analyser = useRef<AnalyserNode | null>(null);
+  const animationId = useRef<number>(null);
 
   useEffect(() => {
     if (audioRef.current && !audioContext.current) {
@@ -77,13 +82,14 @@ function usePlayer(audioRef, canvasRef) {
     if (audioContext.current.state === "suspended") {
       await audioContext.current.resume();
     }
+    audioRef.current.volume = 0.5;
     audioRef.current.play();
     setIsPlay(true);
     animationId.current = requestAnimationFrame(draw);
   };
 
   const handlePause = () => {
-    audioRef.current.pause();
+    audioRef.current.load();
     setIsPlay(false);
     cancelAnimationFrame(animationId.current);
   };
